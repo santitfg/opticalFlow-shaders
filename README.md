@@ -2,12 +2,14 @@
 Procesos para un trabajo práctico de la materia Entornos Sensoriales I (2021) de la UNTREF
 
 En cada carpeta hay un sketch de processing utilizando optical flow (openCV)  desde una cámara y un shader asociado a un tipo de setup diferente
-a excepción de la carpeta op_flow_matrix que solamente tiene una visualización del flujo óptico representado en una grilla de 10 * 10 con vectores indicando las variaciones
 
-el primer shader (el complex) genera un lattice de mosaicos que invierten el color y muestran un feedback de la imagen 
+La carpeta op_flow_matrix solamente tiene una visualización del flujo óptico representado en una grilla de 10 * 10 con vectores indicando las variaciones
 
-mientras que los simplificados utilizan una suma de todo el optical flow para generar un efecto similar, superponiendo la imagen en tiempo real (ya con un efecto de hsv para la simplificada) con un feedback invertido en color
+El primer shader (el complex) genera un lattice de mosaicos que desfasan los canales de color y muestran un feedback de la imagen 
+
+Mientras que los simplificados utilizan una suma de todo el optical flow para generar un efecto similar, superponiendo la imagen en tiempo real con un feedback del desfas en los canales de color.
 a su vez el simplificado con osc envía un pequeño análisis vía OSC para utilizar en pd
+y el hsv tiene los canales invertidos en hsv.
 
 
 ## op_flow_complex_shader
